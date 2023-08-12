@@ -11,7 +11,19 @@ class Logger {
     
     static func info(type: LogType = .info, content: String) {
         let typeText = "\(type)".uppercased()
-        print("[\(typeText)] [\(Date.now)]\n\t\(content)")
+        var contentText: String
+        switch type {
+        case .get:
+            contentText = "'\(content)' was getted"
+        case .create:
+            contentText = "'\(content)' was create"
+        case .delete:
+            contentText = "'\(content)' was deleted"
+        default:
+            contentText = content
+        }
+        
+        print("[\(typeText)] [\(Date.now)]\n\t\(contentText)")
     }
     
     enum LogType: String {

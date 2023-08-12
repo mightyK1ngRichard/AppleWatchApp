@@ -6,26 +6,31 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
     
     // MARK: PROPERTY
     
+    @ObservedResults(Note.self) var allNotes
+    private var sortedNotes: [Note] {
+        allNotes.sorted { $0.timeAddendum > $1.timeAddendum }
+    }
     @State private var noteText = ""
-    @State private var allNotes : [Note] = []
     
     // MARK: BODY
     
     var body: some View {
-        VStack {
-            HeaderView()
-            NotesListView()
+        NavigationStack {
+            VStack {
+                HeaderView()
+                NotesListView()
+            }
         }
-        .navigationTitle("Notes")
-        .onAppear(perform: FetchData)
     }
     
     // MARK: - UI FUNCTIONS
+    
     @ViewBuilder
     private func HeaderView() -> some View {
         HStack(spacing: 6) {
@@ -40,39 +45,47 @@ struct ContentView: View {
             }
             .fixedSize()
             .disabled(noteText.isEmpty)
-            
         }
     }
     
     @ViewBuilder
     private func NotesListView() -> some View {
         List {
-            ForEach(allNotes.sortedByDate()) { note in
+            ForEach(sortedNotes) { note in
                 Text(note.content)
                     .lineLimit(2)
             }
-            .onDelete(perform: DeleteNote)
+            .onDelete(perform: deleteNote)
         }
     }
     
     // MARK: - LOGIC FUNCTIONS
-    
-    private func DeleteNote(_ indexSet: IndexSet) {
-        allNotes.remove(atOffsets: indexSet)
-    }
-    
-    private func FetchData() {
-        allNotes = NOTES
-        Logger.info(type: .get, content: allNotes.convertToString())
-    }
-    
+
     private func didPressPlus() {
         guard !noteText.isEmpty else { return }
-        
-        allNotes.insert(.init(content: noteText), at: 0)
-        Logger.info(type: .create, content: noteText + " was added")
+        let note = Note()
+        note.content = noteText
+        do {
+            try RealmService.shared.createNote(note: note)
+            Logger.info(type: .create, content: note.content)
+        } catch {
+            Logger.info(type: .error, content: error.localizedDescription)
+        }
         noteText.clear()
     }
+    
+    private func deleteNote(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let deletedNote = sortedNotes[index]
+        do {
+            try RealmService.shared.deleteItem(note: deletedNote)
+            Logger.info(type: .delete, content: deletedNote.content)
+            
+        } catch {
+            Logger.info(type: .error, content: error.localizedDescription)
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -83,24 +96,24 @@ struct ContentView_Previews: PreviewProvider {
 
 // MARK: - Extension
 
-private extension Array where Element == Note {
-    
-    mutating func sortedByDate() {
-        self = self.sorted { $0.timeAddendum > $1.timeAddendum }
-    }
-  
-    func sortedByDate() -> Self {
-        return self.sorted { $0.timeAddendum > $1.timeAddendum }
-    }
-    
-    func convertToString() -> String {
-        var str = ""
-        for note in self {
-            str += note.content
-            str += "\n\t"
-        }
-        
-        return str
-    }
-    
-}
+//private extension Array where Element == Note {
+//
+//    mutating func sortByDate() {
+//        self.sort { $0.timeAddendum > $1.timeAddendum }
+//    }
+//
+//    func sortedByDate() -> Self {
+//        return self.sorted { $0.timeAddendum > $1.timeAddendum }
+//    }
+//
+//    func convertToString() -> String {
+//        var str = ""
+//        for note in self {
+//            str += note.content
+//            str += "\n\t"
+//        }
+//
+//        return str
+//    }
+//
+//}

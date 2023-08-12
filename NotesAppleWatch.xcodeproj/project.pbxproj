@@ -16,6 +16,9 @@
 		2C009E202A873A5800608B6E /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E1F2A873A5800608B6E /* NoteView.swift */; };
 		2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E242A873CCE00608B6E /* Ext + String.swift */; };
 		2C009E282A874AD400608B6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E272A874AD400608B6E /* Logger.swift */; };
+		2C009E2B2A87549000608B6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2A2A87549000608B6E /* Realm */; };
+		2C009E2D2A87549000608B6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2C2A87549000608B6E /* RealmSwift */; };
+		2C009E312A8754D200608B6E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E302A8754D200608B6E /* RealmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 		2C009E1F2A873A5800608B6E /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		2C009E242A873CCE00608B6E /* Ext + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + String.swift"; sourceTree = "<group>"; };
 		2C009E272A874AD400608B6E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2C009E302A8754D200608B6E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C009E2D2A87549000608B6E /* RealmSwift in Frameworks */,
+				2C009E2B2A87549000608B6E /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,9 +92,9 @@
 		2C009E062A87369100608B6E /* NotesAppleWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				2C009E262A874ACB00608B6E /* Logger */,
-				2C009E232A873CBD00608B6E /* Extensions */,
 				2C009E212A873B2D00608B6E /* Application */,
+				2C009E232A873CBD00608B6E /* Extensions */,
+				2C009E2E2A8754BA00608B6E /* Services */,
 				2C009E1D2A87393B00608B6E /* MainView */,
 				2C009E0B2A87369200608B6E /* Assets.xcassets */,
 				2C009E0D2A87369200608B6E /* Preview Content */,
@@ -162,6 +168,23 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		2C009E2E2A8754BA00608B6E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C009E262A874ACB00608B6E /* Logger */,
+				2C009E2F2A8754C600608B6E /* Store */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C009E2F2A8754C600608B6E /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2C009E302A8754D200608B6E /* RealmService.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,6 +218,10 @@
 			dependencies = (
 			);
 			name = "NotesAppleWatch Watch App";
+			packageProductDependencies = (
+				2C009E2A2A87549000608B6E /* Realm */,
+				2C009E2C2A87549000608B6E /* RealmSwift */,
+			);
 			productName = "NotesAppleWatch Watch App";
 			productReference = 2C009E022A87369100608B6E /* NotesAppleWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 2C009DF52A87369100608B6E;
+			packageReferences = (
+				2C009E292A87549000608B6E /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 2C009DFD2A87369100608B6E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +292,7 @@
 			files = (
 				2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */,
 				2C009E282A874AD400608B6E /* Logger.swift in Sources */,
+				2C009E312A8754D200608B6E /* RealmService.swift in Sources */,
 				2C009E0A2A87369100608B6E /* ContentView.swift in Sources */,
 				2C009E082A87369100608B6E /* NotesAppleWatchApp.swift in Sources */,
 				2C009E202A873A5800608B6E /* NoteView.swift in Sources */,
@@ -514,6 +545,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C009E292A87549000608B6E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C009E2A2A87549000608B6E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C009E292A87549000608B6E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		2C009E2C2A87549000608B6E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C009E292A87549000608B6E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C009DF62A87369100608B6E /* Project object */;
 }

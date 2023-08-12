@@ -15,6 +15,7 @@
 		2C009E1C2A87390400608B6E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E1B2A87390400608B6E /* Note.swift */; };
 		2C009E202A873A5800608B6E /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E1F2A873A5800608B6E /* NoteView.swift */; };
 		2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E242A873CCE00608B6E /* Ext + String.swift */; };
+		2C009E282A874AD400608B6E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E272A874AD400608B6E /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2C009E1B2A87390400608B6E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		2C009E1F2A873A5800608B6E /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		2C009E242A873CCE00608B6E /* Ext + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + String.swift"; sourceTree = "<group>"; };
+		2C009E272A874AD400608B6E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		2C009E062A87369100608B6E /* NotesAppleWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				2C009E262A874ACB00608B6E /* Logger */,
 				2C009E232A873CBD00608B6E /* Extensions */,
 				2C009E212A873B2D00608B6E /* Application */,
 				2C009E1D2A87393B00608B6E /* MainView */,
@@ -149,6 +152,14 @@
 				2C009E242A873CCE00608B6E /* Ext + String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C009E262A874ACB00608B6E /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				2C009E272A874AD400608B6E /* Logger.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */,
+				2C009E282A874AD400608B6E /* Logger.swift in Sources */,
 				2C009E0A2A87369100608B6E /* ContentView.swift in Sources */,
 				2C009E082A87369100608B6E /* NotesAppleWatchApp.swift in Sources */,
 				2C009E202A873A5800608B6E /* NoteView.swift in Sources */,

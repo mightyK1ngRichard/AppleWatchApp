@@ -63,12 +63,14 @@ struct ContentView: View {
     
     private func FetchData() {
         allNotes = NOTES
+        Logger.info(type: .get, content: allNotes.convertToString())
     }
     
     private func didPressPlus() {
         guard !noteText.isEmpty else { return }
         
         allNotes.insert(.init(content: noteText), at: 0)
+        Logger.info(type: .create, content: noteText + " was added")
         noteText.clear()
     }
 }
@@ -89,6 +91,16 @@ private extension Array where Element == Note {
   
     func sortedByDate() -> Self {
         return self.sorted { $0.timeAddendum > $1.timeAddendum }
+    }
+    
+    func convertToString() -> String {
+        var str = ""
+        for note in self {
+            str += note.content
+            str += "\n\t"
+        }
+        
+        return str
     }
     
 }

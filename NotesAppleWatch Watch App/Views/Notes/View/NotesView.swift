@@ -8,7 +8,7 @@
 import SwiftUI
 import RealmSwift
 
-struct ContentView: View {
+struct NotesView: View {
     
     // MARK: PROPERTY
     
@@ -21,11 +21,9 @@ struct ContentView: View {
     // MARK: BODY
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                HeaderView()
-                NotesListView()
-            }
+        VStack {
+            HeaderView()
+            NotesListView()
         }
     }
     
@@ -88,32 +86,8 @@ struct ContentView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NotesView()
     }
 }
-
-// MARK: - Extension
-
-//private extension Array where Element == Note {
-//
-//    mutating func sortByDate() {
-//        self.sort { $0.timeAddendum > $1.timeAddendum }
-//    }
-//
-//    func sortedByDate() -> Self {
-//        return self.sorted { $0.timeAddendum > $1.timeAddendum }
-//    }
-//
-//    func convertToString() -> String {
-//        var str = ""
-//        for note in self {
-//            str += note.content
-//            str += "\n\t"
-//        }
-//
-//        return str
-//    }
-//
-//}

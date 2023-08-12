@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C009E032A87369100608B6E /* NotesAppleWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2C009E022A87369100608B6E /* NotesAppleWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2C009E032A87369100608B6E /* K1ng.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2C009E022A87369100608B6E /* K1ng.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2C009E082A87369100608B6E /* NotesAppleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E072A87369100608B6E /* NotesAppleWatchApp.swift */; };
-		2C009E0A2A87369100608B6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E092A87369100608B6E /* ContentView.swift */; };
 		2C009E0C2A87369200608B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C009E0B2A87369200608B6E /* Assets.xcassets */; };
 		2C009E0F2A87369200608B6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C009E0E2A87369200608B6E /* Preview Assets.xcassets */; };
 		2C009E1C2A87390400608B6E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E1B2A87390400608B6E /* Note.swift */; };
@@ -19,6 +18,11 @@
 		2C009E2B2A87549000608B6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2A2A87549000608B6E /* Realm */; };
 		2C009E2D2A87549000608B6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2C2A87549000608B6E /* RealmSwift */; };
 		2C009E312A8754D200608B6E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E302A8754D200608B6E /* RealmService.swift */; };
+		2CF455DD2A87F3660044A208 /* CrossZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455DC2A87F3660044A208 /* CrossZeroView.swift */; };
+		2CF455E02A87F5570044A208 /* CrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455DF2A87F5570044A208 /* CrossView.swift */; };
+		2CF455E22A87FC830044A208 /* ZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455E12A87FC830044A208 /* ZeroView.swift */; };
+		2CF455E42A880E300044A208 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455E32A880E300044A208 /* MainView.swift */; };
+		2CF455E62A8810EE0044A208 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455E52A8810EE0044A208 /* NotesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2C009E032A87369100608B6E /* NotesAppleWatch Watch App.app in Embed Watch Content */,
+				2C009E032A87369100608B6E /* K1ng.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,9 +51,8 @@
 
 /* Begin PBXFileReference section */
 		2C009DFC2A87369100608B6E /* NotesAppleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesAppleWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C009E022A87369100608B6E /* NotesAppleWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NotesAppleWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C009E022A87369100608B6E /* K1ng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K1ng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C009E072A87369100608B6E /* NotesAppleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppleWatchApp.swift; sourceTree = "<group>"; };
-		2C009E092A87369100608B6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C009E0B2A87369200608B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C009E0E2A87369200608B6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C009E1B2A87390400608B6E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		2C009E242A873CCE00608B6E /* Ext + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + String.swift"; sourceTree = "<group>"; };
 		2C009E272A874AD400608B6E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2C009E302A8754D200608B6E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		2CF455DC2A87F3660044A208 /* CrossZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossZeroView.swift; sourceTree = "<group>"; };
+		2CF455DF2A87F5570044A208 /* CrossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossView.swift; sourceTree = "<group>"; };
+		2CF455E12A87FC830044A208 /* ZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroView.swift; sourceTree = "<group>"; };
+		2CF455E32A880E300044A208 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2CF455E52A8810EE0044A208 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2C009DFC2A87369100608B6E /* NotesAppleWatch.app */,
-				2C009E022A87369100608B6E /* NotesAppleWatch Watch App.app */,
+				2C009E022A87369100608B6E /* K1ng.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +103,7 @@
 				2C009E212A873B2D00608B6E /* Application */,
 				2C009E232A873CBD00608B6E /* Extensions */,
 				2C009E2E2A8754BA00608B6E /* Services */,
-				2C009E1D2A87393B00608B6E /* MainView */,
+				2CF455D92A87F3390044A208 /* Views */,
 				2C009E0B2A87369200608B6E /* Assets.xcassets */,
 				2C009E0D2A87369200608B6E /* Preview Content */,
 			);
@@ -113,7 +121,7 @@
 		2C009E192A8738F000608B6E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C009E092A87369100608B6E /* ContentView.swift */,
+				2CF455E52A8810EE0044A208 /* NotesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,9 +137,7 @@
 		2C009E1D2A87393B00608B6E /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				2C009E1A2A8738F500608B6E /* Model */,
-				2C009E1E2A873A4900608B6E /* Componets */,
-				2C009E192A8738F000608B6E /* View */,
+				2CF455E32A880E300044A208 /* MainView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -185,6 +191,52 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		2CF455D92A87F3390044A208 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CF455E72A8811040044A208 /* Notes */,
+				2CF455DA2A87F3440044A208 /* CrossZero */,
+				2C009E1D2A87393B00608B6E /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CF455DA2A87F3440044A208 /* CrossZero */ = {
+			isa = PBXGroup;
+			children = (
+				2CF455DE2A87F54C0044A208 /* Components */,
+				2CF455DB2A87F35A0044A208 /* View */,
+			);
+			path = CrossZero;
+			sourceTree = "<group>";
+		};
+		2CF455DB2A87F35A0044A208 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CF455DC2A87F3660044A208 /* CrossZeroView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2CF455DE2A87F54C0044A208 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2CF455DF2A87F5570044A208 /* CrossView.swift */,
+				2CF455E12A87FC830044A208 /* ZeroView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2CF455E72A8811040044A208 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				2C009E1A2A8738F500608B6E /* Model */,
+				2C009E1E2A873A4900608B6E /* Componets */,
+				2C009E192A8738F000608B6E /* View */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,7 +275,7 @@
 				2C009E2C2A87549000608B6E /* RealmSwift */,
 			);
 			productName = "NotesAppleWatch Watch App";
-			productReference = 2C009E022A87369100608B6E /* NotesAppleWatch Watch App.app */;
+			productReference = 2C009E022A87369100608B6E /* K1ng.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -290,10 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF455E02A87F5570044A208 /* CrossView.swift in Sources */,
 				2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */,
 				2C009E282A874AD400608B6E /* Logger.swift in Sources */,
 				2C009E312A8754D200608B6E /* RealmService.swift in Sources */,
-				2C009E0A2A87369100608B6E /* ContentView.swift in Sources */,
+				2CF455E22A87FC830044A208 /* ZeroView.swift in Sources */,
+				2CF455DD2A87F3660044A208 /* CrossZeroView.swift in Sources */,
+				2CF455E62A8810EE0044A208 /* NotesView.swift in Sources */,
+				2CF455E42A880E300044A208 /* MainView.swift in Sources */,
 				2C009E082A87369100608B6E /* NotesAppleWatchApp.swift in Sources */,
 				2C009E202A873A5800608B6E /* NoteView.swift in Sources */,
 				2C009E1C2A87390400608B6E /* Note.swift in Sources */,
@@ -431,7 +487,6 @@
 				DEVELOPMENT_TEAM = SKCX3NJ774;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = NotesAppleWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -440,7 +495,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mightyK1ngRichard.NotesAppleWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = K1ng;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -461,7 +516,6 @@
 				DEVELOPMENT_TEAM = SKCX3NJ774;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = NotesAppleWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +524,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mightyK1ngRichard.NotesAppleWatch.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = K1ng;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

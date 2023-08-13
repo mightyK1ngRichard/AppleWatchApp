@@ -18,6 +18,7 @@
 		2C009E2B2A87549000608B6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2A2A87549000608B6E /* Realm */; };
 		2C009E2D2A87549000608B6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C009E2C2A87549000608B6E /* RealmSwift */; };
 		2C009E312A8754D200608B6E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C009E302A8754D200608B6E /* RealmService.swift */; };
+		2C319EFD2A88F715005948F5 /* GameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C319EFC2A88F715005948F5 /* GameResults.swift */; };
 		2CF455DD2A87F3660044A208 /* CrossZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455DC2A87F3660044A208 /* CrossZeroView.swift */; };
 		2CF455E02A87F5570044A208 /* CrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455DF2A87F5570044A208 /* CrossView.swift */; };
 		2CF455E22A87FC830044A208 /* ZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF455E12A87FC830044A208 /* ZeroView.swift */; };
@@ -60,6 +61,7 @@
 		2C009E242A873CCE00608B6E /* Ext + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + String.swift"; sourceTree = "<group>"; };
 		2C009E272A874AD400608B6E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2C009E302A8754D200608B6E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		2C319EFC2A88F715005948F5 /* GameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResults.swift; sourceTree = "<group>"; };
 		2CF455DC2A87F3660044A208 /* CrossZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossZeroView.swift; sourceTree = "<group>"; };
 		2CF455DF2A87F5570044A208 /* CrossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossView.swift; sourceTree = "<group>"; };
 		2CF455E12A87FC830044A208 /* ZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		2C319EFB2A88F709005948F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C319EFC2A88F715005948F5 /* GameResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2CF455D92A87F3390044A208 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		2CF455DA2A87F3440044A208 /* CrossZero */ = {
 			isa = PBXGroup;
 			children = (
+				2C319EFB2A88F709005948F5 /* Model */,
 				2CF455DE2A87F54C0044A208 /* Components */,
 				2CF455DB2A87F35A0044A208 /* View */,
 			);
@@ -342,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C319EFD2A88F715005948F5 /* GameResults.swift in Sources */,
 				2CF455E02A87F5570044A208 /* CrossView.swift in Sources */,
 				2C009E252A873CCE00608B6E /* Ext + String.swift in Sources */,
 				2C009E282A874AD400608B6E /* Logger.swift in Sources */,

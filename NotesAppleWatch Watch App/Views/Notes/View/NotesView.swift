@@ -21,7 +21,7 @@ struct NotesView: View {
     // MARK: BODY
     
     var body: some View {
-        VStack {
+        NavigationStack {
             HeaderView()
             NotesListView()
         }
@@ -50,16 +50,37 @@ struct NotesView: View {
     private func NotesListView() -> some View {
         List {
             ForEach(sortedNotes) { note in
-                Text(note.content)
-                    .lineLimit(2)
+                NavigationLink {
+                    NoteView(note: note)
+                    
+                } label: {
+                    NoteRow(note)
+                }
+                
             }
             .onDelete(perform: deleteNote)
         }
+        
     }
     
-    // MARK: - LOGIC FUNCTIONS
+    @ViewBuilder
+    private func NoteRow(_ note: Note) -> some View {
+        HStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 3)
+                .foregroundColor(.orange)
+                .padding(.trailing, 5)
+            
+            Text(note.content)
+                .lineLimit(2)
+        }
+    }
+}
 
-    private func didPressPlus() {
+// MARK: - LOGIC FUNCTIONS
+
+private extension NotesView {
+    func didPressPlus() {
         guard !noteText.isEmpty else { return }
         let note = Note()
         note.content = noteText
@@ -72,7 +93,7 @@ struct NotesView: View {
         noteText.clear()
     }
     
-    private func deleteNote(indexSet: IndexSet) {
+    func deleteNote(indexSet: IndexSet) {
         guard let index = indexSet.first else { return }
         let deletedNote = sortedNotes[index]
         do {
@@ -83,7 +104,6 @@ struct NotesView: View {
             Logger.info(type: .error, content: error.localizedDescription)
         }
     }
-    
 }
 
 struct NotesView_Previews: PreviewProvider {

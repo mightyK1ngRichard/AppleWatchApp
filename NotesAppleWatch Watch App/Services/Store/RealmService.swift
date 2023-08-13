@@ -40,4 +40,17 @@ class RealmService {
             throw error
         }
     }
+    
+    func updateNote(note: Note, string: String) throws {
+        if let objectToUpdate = realm.objects(Note.self).filter("id == %@", note.id).first {
+            do {
+                try realm.write {
+                    objectToUpdate.content = string
+                }
+                
+            } catch {
+                throw error
+            }
+        }
+    }
 }

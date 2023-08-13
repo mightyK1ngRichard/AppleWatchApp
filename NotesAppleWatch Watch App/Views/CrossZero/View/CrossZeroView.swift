@@ -59,7 +59,7 @@ struct Square: View {
         } label: {
             ZStack {
                 Rectangle()
-                    .fill(isHidden ? .gray : .black)
+                    .fill(isHidden ? .pink.opacity(0.8) : .clear)
                     .offset(x: isHidden ? 0 : proxy.width - (proxy.width / 3),
                             y: isHidden ? 0 : proxy.height - height)
                 

@@ -1,5 +1,5 @@
 # SimpleAppleWatchApp
 
 ## Preview:
-<img class="screen_application" src="Preview/Preview.jpg" width="1000">
+<img class="screen_application" src="Preview/Preview.png" width="1000">
 
